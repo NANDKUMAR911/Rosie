@@ -9,6 +9,7 @@ import os
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../.."))
 COOKIES_PATH = os.path.join(BASE_DIR, "cookies.txt")
 
+COOKIES_PATH = "/app/cookies.txt"
 print(COOKIES_PATH)
 
 def is_url(text: str):
