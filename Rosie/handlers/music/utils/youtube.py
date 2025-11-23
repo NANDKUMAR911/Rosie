@@ -5,12 +5,11 @@ import os
 
 POOL = ProcessPoolExecutor(max_workers=8)
 import os
-
-
+# main.py se /app tak 4 level upar jao:
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../.."))
 COOKIES_PATH = os.path.join(BASE_DIR, "cookies.txt")
 
-COOKIES_PATH = "app/cookies.txt"
+print(COOKIES_PATH)
 
 def is_url(text: str):
     return text.startswith("http://") or text.startswith("https://")
