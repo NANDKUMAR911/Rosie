@@ -6,10 +6,8 @@ import os
 POOL = ProcessPoolExecutor(max_workers=8)
 import os
 
-import os
 
-# cookies.txt is in the same folder as this script
-BASE_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../.."))
 COOKIES_PATH = os.path.join(BASE_DIR, "cookies.txt")
 
 
