@@ -6,10 +6,11 @@ import os
 POOL = ProcessPoolExecutor(max_workers=8)
 import os
 
-# youtube.py ka path se 4 level upar jao (Rosie se bahar)
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", ".."))
-COOKIES_PATH = os.path.join(BASE_DIR, "cookies.txt")
+import os
 
+# cookies.txt is in the same folder as this script
+BASE_DIR = os.path.dirname(__file__)
+COOKIES_PATH = os.path.join(BASE_DIR, "cookies.txt")
 
 
 def is_url(text: str):
