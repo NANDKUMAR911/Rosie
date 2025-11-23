@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copy project files
 COPY Rosie ./Rosie
 COPY requirements.txt .
-COPY cookies.txt ./cookies.txt   
 
 # Install Python dependencies
 RUN python3 -m pip install --upgrade pip \
