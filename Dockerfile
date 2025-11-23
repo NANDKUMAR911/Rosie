@@ -1,12 +1,9 @@
-# ---- Work directory ----
-WORKDIR /app
-
-# ---- Copy project ----
-COPY . .
+# ---- Copy project to /app ----
+COPY . /app
 
 # ---- Install Python dependencies ----
 RUN python3 -m pip install --upgrade pip \
-    && python3 -m pip install -r requirements.txt
+    && python3 -m pip install -r /app/requirements.txt
 
-# ---- Start ----
-CMD ["python3", "Rosie"]
+# ---- Start project ----
+CMD ["python3", "/app/Rosie"]
