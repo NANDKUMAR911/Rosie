@@ -1,5 +1,5 @@
 # ---- Base Image ----
-FROM python:3.11-alpine
+FROM python:3.11-slim
 
 # ---- Environment ----
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -12,11 +12,11 @@ WORKDIR /app
 COPY requirements.txt .
 
 # ---- Install Python dependencies ----
-RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip \
+    && pip install -r requirements.txt
 
 # ---- Copy project ----
 COPY . .
 
 # ---- Start ----
-CMD ["python3", "Rosie"]    
+CMD ["python3", "Rosie"]
